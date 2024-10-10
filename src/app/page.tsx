@@ -16,8 +16,8 @@ export default function Home() {
   useEffect(() => {
     const fetchEmojis = async () => {
       try {
-        const response = await fetch('https://emojihub-1001447344924.asia-southeast2.run.app/api/all');
-        if (!response.ok) {
+        const response = await fetch('https://emojihub-1001447344924.asia-southeast2.run.app/api/all/category/smileys-and-people');
+        if (!response.ok) { 
           throw new Error(`Failed to fetch: ${response.status}`);
         }
         const data: Emoji[] = await response.json();
@@ -63,7 +63,7 @@ export default function Home() {
       <header className="w-full p-4 h-24 flex items-start">
         <h1 className="text-[#F3CF56] text-4xl font-bold relative" style={{ 
           WebkitTextStroke: '1px #4A7582', 
-          textStroke: '1px #4A7582' 
+          
         }}>
           emojilogy
         </h1>
